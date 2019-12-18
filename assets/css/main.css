@@ -1475,7 +1475,7 @@ input, select, textarea {
 					-webkit-flex-direction: column;
 					-ms-flex-direction: column;
 					flex-direction: column;
-					min-width: 10rem;
+					min-width: 50rem;
 					max-width: 100%;
 				}
 
@@ -1637,11 +1637,11 @@ input, select, textarea {
 	}
 
 		#footer .copyright {
-			letter-spacing: 0.2rem;
+			letter-spacing: 0.05rem;
 			font-size: 0.6rem;
 			opacity: 0.75;
 			margin-bottom: 0;
-			text-transform: uppercase;
+			
 		}
 
 		body.is-article-visible #footer {
