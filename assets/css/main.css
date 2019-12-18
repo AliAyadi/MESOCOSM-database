@@ -1475,7 +1475,7 @@ input, select, textarea {
 					-webkit-flex-direction: column;
 					-ms-flex-direction: column;
 					flex-direction: column;
-					min-width: 50rem;
+					min-width: 10rem;
 					max-width: 100%;
 				}
 
