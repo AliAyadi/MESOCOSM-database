@@ -113,7 +113,28 @@
 									<h5>Heading Level 5</h5>
 									<h6>Heading Level 6</h6>
 									<hr />
-									<h4>Blockquote</h4>
+									<h4>Prerequisites</h4>
+									<p>You need a MySQL database server (5.0+) and run the commands below through a user that has the following privileges:</p>
+									<pre><code>
+									SELECT, INSERT, UPDATE, DELETE, 
+									CREATE, DROP, RELOAD, REFERENCES, 
+									INDEX, ALTER, SHOW DATABASES, 
+									CREATE TEMPORARY TABLES, 
+									LOCK TABLES, EXECUTE, CREATE VIEW
+									</code></pre>
+									<h4>Installation:</h4>
+									<ol>
+										<li>Download the repository</li>
+										<li>Change directory to the repository</li>
+									</ol>
+									<p>Then run</p>
+									<pre><code>
+									mysql < employees.sql
+									</code></pre>
+									<p>If you want to install with two large partitioned tables, run</p>
+									<pre><code>
+									mysql < employees_partitioned.sql
+									</code></pre>
 									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
 									<h4>Preformatted</h4>
 									<pre><code>i = 0;
