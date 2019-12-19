@@ -1639,7 +1639,7 @@ input, select, textarea {
 			opacity: 0.75;
 			margin-bottom: 0;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/SERENADE.png");
-			background-size: auto, 80px 50px;
+			background-size: auto, 50px 40px;
 			background-position: center, center;
 			background-repeat: no-repeat;
 			
