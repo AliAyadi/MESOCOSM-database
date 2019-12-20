@@ -124,42 +124,253 @@ mysql -t < test_employees_sha.sql
 									<h4>Preformatted</h4>
 									<p>For example:</p>
 									<pre><code>
-mysql  -t < test_employees_md5.sql
+Microsoft Windows [version 10.0.17763.914]
+(c) 2018 Microsoft Corporation. Tous droits réservés.
+
+C:>cd \xampp\mysql\bin
+
+C:\xampp\mysql\bin>mysql -u (root) -p (password) -h (host server)
+Enter password:
+Welcome to the Oracle monitor.  Commands end with ; or \g.
+Your Oracle connection id is 264
+Server version: 10.4.6-Oraclem oracle.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+Oracle [(none)]> use serenadedb;
+Database changed
+
+Oracle [EXPOSEDdb]> show tables;
 +----------------------+
-| INFO                 |
+| Tables_in_EXPOSEDdb |
 +----------------------+
-| TESTING INSTALLATION |
+| bibliography         |
+| description          |
+| dictionary           |
+| experiment           |
+| institution          |
+| instrument           |
+| measure              |
+| measurement          |
+| people               |
+| protocol             |
+| publication          |
+| sampling             |
+| users                |
 +----------------------+
-+--------------+------------------+----------------------------------+
-| table_name   | expected_records | expected_crc                     |
-+--------------+------------------+----------------------------------+
-| employees    |           300024 | 4ec56ab5ba37218d187cf6ab09ce1aa1 |
-| departments  |                9 | d1af5e170d2d1591d776d5638d71fc5f |
-| dept_manager |               24 | 8720e2f0853ac9096b689c14664f847e |
-| dept_emp     |           331603 | ccf6fe516f990bdaa49713fc478701b7 |
-| titles       |           443308 | bfa016c472df68e70a03facafa1bc0a8 |
-| salaries     |          2844047 | fd220654e95aea1b169624ffe3fca934 |
-+--------------+------------------+----------------------------------+
-+--------------+------------------+----------------------------------+
-| table_name   | found_records    | found_crc                        |
-+--------------+------------------+----------------------------------+
-| employees    |           300024 | 4ec56ab5ba37218d187cf6ab09ce1aa1 |
-| departments  |                9 | d1af5e170d2d1591d776d5638d71fc5f |
-| dept_manager |               24 | 8720e2f0853ac9096b689c14664f847e |
-| dept_emp     |           331603 | ccf6fe516f990bdaa49713fc478701b7 |
-| titles       |           443308 | bfa016c472df68e70a03facafa1bc0a8 |
-| salaries     |          2844047 | fd220654e95aea1b169624ffe3fca934 |
-+--------------+------------------+----------------------------------+
-+--------------+---------------+-----------+
-| table_name   | records_match | crc_match |
-+--------------+---------------+-----------+
-| employees    | OK            | ok        |
-| departments  | OK            | ok        |
-| dept_manager | OK            | ok        |
-| dept_emp     | OK            | ok        |
-| titles       | OK            | ok        |
-| salaries     | OK            | ok        |
-+--------------+---------------+-----------+
+13 rows in set (0.002 sec)
+
+Oracle [EXPOSEDdb]> describe experiment;
++---------------------+--------------+------+-----+---------+----------------+
+| Field               | Type         | Null | Key | Default | Extra          |
++---------------------+--------------+------+-----+---------+----------------+
+| IDE                 | int(200)     | NO   | PRI | NULL    | auto_increment |
+| doi                 | varchar(255) | YES  | MUL | NULL    |                |
+| Total_time          | int(150)     | NO   |     | NULL    |                |
+| Ecosystem           | varchar(20)  | NO   |     | NULL    |                |
+| Primary_consumer    | varchar(20)  | NO   |     | NULL    |                |
+| Secondary_consumer  | varchar(20)  | YES  |     | NULL    |                |
+| Benthic_inocolum    | varchar(20)  | YES  |     | NULL    |                |
+| Planctonic_inocolum | varchar(20)  | YES  |     | NULL    |                |
++---------------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.023 sec)
+
+Oracle [EXPOSEDdb]> describe sampling;
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| IDS            | int(255)    | NO   | PRI | NULL    | auto_increment |
+| IDE            | int(255)    | NO   | MUL | NULL    |                |
+| Injection_mode | varchar(20) | NO   |     | NULL    |                |
+| Metal          | varchar(25) | YES  |     | NULL    |                |
+| Mineralogy     | varchar(25) | YES  |     | NULL    |                |
+| Shape          | varchar(25) | YES  |     | NULL    |                |
+| Coating        | varchar(25) | YES  |     | NULL    |                |
+| Size           | int(25)     | YES  |     | NULL    |                |
+| Contaminant    | varchar(25) | YES  |     | NULL    |                |
+| Sampling_time  | int(150)    | NO   |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+10 rows in set (0.028 sec)
+
+Oracle [EXPOSEDdb]> describe measure;
++----------------------+----------+------+-----+---------+----------------+
+| Field                | Type     | Null | Key | Default | Extra          |
++----------------------+----------+------+-----+---------+----------------+
+| IDM                  | int(255) | NO   | PRI | NULL    | auto_increment |
+| IDS                  | int(255) | NO   | MUL | NULL    |                |
+| Total_dose           | float    | NO   |     | NULL    |                |
+| PH                   | float    | YES  |     | NULL    |                |
+| Temperature          | float    | YES  |     | NULL    |                |
+| Conductivity         | float    | YES  |     | NULL    |                |
+| Dissolved_oxygen     | float    | YES  |     | NULL    |                |
+| TOC                  | float    | YES  |     | NULL    |                |
+| ORP_water            | float    | YES  |     | NULL    |                |
+| ORP_sediment         | float    | YES  |     | NULL    |                |
+| ORP_interface        | float    | YES  |     | NULL    |                |
+| Particles_water      | float    | YES  |     | NULL    |                |
+| Metal_sediment       | float    | YES  |     | NULL    |                |
+| Metal_water          | float    | YES  |     | NULL    |                |
+| Dissolved_Metal      | float    | YES  |     | NULL    |                |
+| Metal_layings        | float    | YES  |     | NULL    |                |
+| Metal_gland          | float    | YES  |     | NULL    |                |
+| Metal_adult          | float    | YES  |     | NULL    |                |
+| Metal_juveniles      | float    | YES  |     | NULL    |                |
+| CU_NI_sediment       | float    | YES  |     | NULL    |                |
+| Speciation_digestive | float    | YES  |     | NULL    |                |
+| Speciation_layings   | float    | YES  |     | NULL    |                |
+| Speciation_juveniles | float    | YES  |     | NULL    |                |
+| Adult                | float    | YES  |     | NULL    |                |
+| Juveniles            | float    | YES  |     | NULL    |                |
+| Picoplankton         | float    | YES  |     | NULL    |                |
+| Picobenthos          | float    | YES  |     | NULL    |                |
+| Algae_water          | float    | YES  |     | NULL    |                |
+| Algae_sediment       | float    | YES  |     | NULL    |                |
+| TBARS                | float    | YES  |     | NULL    |                |
+| TAOC                 | float    | YES  |     | NULL    |                |
++----------------------+----------+------+-----+---------+----------------+
+31 rows in set (0.029 sec)
+
+Oracle [EXPOSEDdb]> describe publication;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DOI             | varchar(350) | NO   | PRI | NULL    |       |
+| Title           | varchar(250) | YES  |     | NULL    |       |
+| Journal         | varchar(250) | YES  |     | NULL    |       |
+| Year            | varchar(250) | YES  |     | NULL    |       |
+| Volume          | varchar(250) | YES  |     | NULL    |       |
+| Issue           | varchar(250) | YES  |     | NULL    |       |
+| Page            | varchar(250) | YES  |     | NULL    |       |
+| Contact_Author  | varchar(250) | NO   |     | NULL    |       |
+| Keywords        | varchar(250) | YES  |     | NULL    |       |
+| Abstract        | varchar(250) | YES  |     | NULL    |       |
+| Publish_Status  | varchar(250) | YES  |     | NULL    |       |
+| Curation_Status | varchar(250) | YES  |     | NULL    |       |
+| Curation_Note   | varchar(250) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+13 rows in set (0.027 sec)
+
+Oracle [EXPOSEDdb]> describe publication;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| DOI             | varchar(350) | NO   | PRI | NULL    |       |
+| Title           | varchar(250) | YES  |     | NULL    |       |
+| Journal         | varchar(250) | YES  |     | NULL    |       |
+| Year            | varchar(250) | YES  |     | NULL    |       |
+| Volume          | varchar(250) | YES  |     | NULL    |       |
+| Issue           | varchar(250) | YES  |     | NULL    |       |
+| Page            | varchar(250) | YES  |     | NULL    |       |
+| Contact_Author  | varchar(250) | NO   |     | NULL    |       |
+| Keywords        | varchar(250) | YES  |     | NULL    |       |
+| Abstract        | varchar(250) | YES  |     | NULL    |       |
+| Publish_Status  | varchar(250) | YES  |     | NULL    |       |
+| Curation_Status | varchar(250) | YES  |     | NULL    |       |
+| Curation_Note   | varchar(250) | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+13 rows in set (0.027 sec)
+
+Oracle [EXPOSEDdb]> describe bibliography;
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| Bibliography_ID | int(250)     | NO   | PRI | NULL    | auto_increment |
+| People_ID       | int(250)     | NO   | MUL | NULL    |                |
+| Institution_ID  | int(250)     | NO   | MUL | NULL    |                |
+| DOI             | varchar(350) | NO   | MUL | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.025 sec)
+
+Oracle [EXPOSEDdb]> describe description;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| Description_ID | int(255)     | NO   | PRI | NULL    | auto_increment |
+| Table_descrip  | varchar(250) | YES  |     | NULL    |                |
+| Field          | varchar(250) | YES  |     | NULL    |                |
+| Note           | varchar(250) | YES  |     | NULL    |                |
+| Data_type      | varchar(250) | YES  |     | NULL    |                |
+| Valid_value    | varchar(250) | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.029 sec)
+
+Oracle [EXPOSEDdb]> describe dictionary;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| Dictionary_ID | int(255)     | NO   | PRI | NULL    | auto_increment |
+| Group         | varchar(250) | YES  |     | NULL    |                |
+| Item          | varchar(250) | YES  |     | NULL    |                |
+| Parameter     | varchar(350) | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.024 sec)
+
+Oracle [EXPOSEDdb]> describe institution;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| Institution_ID | int(255)     | NO   | PRI | NULL    | auto_increment |
+| Department     | varchar(250) | YES  |     | NULL    |                |
+| Institution    | varchar(250) | YES  |     | NULL    |                |
+| City           | varchar(250) | YES  |     | NULL    |                |
+| State          | varchar(250) | YES  |     | NULL    |                |
+| Zipcode        | varchar(250) | YES  |     | NULL    |                |
+| Country        | varchar(250) | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.042 sec)
+
+Oracle [EXPOSEDdb]> describe people;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| People_ID   | int(255)     | NO   | PRI | NULL    | auto_increment |
+| First_Name  | varchar(250) | YES  |     | NULL    |                |
+| Last_Name   | varchar(250) | YES  |     | NULL    |                |
+| Middle_Name | varchar(250) | YES  |     | NULL    |                |
+| Email       | varchar(250) | YES  |     | NULL    |                |
+| Phone       | varchar(250) | YES  |     | NULL    |                |
+| Web         | varchar(250) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.021 sec)
+
+Oracle [EXPOSEDdb]> describe instrument;
++----------------------+--------------+------+-----+---------+----------------+
+| Field                | Type         | Null | Key | Default | Extra          |
++----------------------+--------------+------+-----+---------+----------------+
+| Instrument_ID        | int(255)     | NO   | PRI | NULL    | auto_increment |
+| Name                 | varchar(250) | YES  |     | NULL    |                |
+| Model                | varchar(250) | YES  |     | NULL    |                |
+| Manufacturer_Name    | varchar(250) | YES  |     | NULL    |                |
+| Manufacturer_City    | varchar(250) | YES  |     | NULL    |                |
+| Manufacturer_State   | varchar(250) | YES  |     | NULL    |                |
+| Manufacturer_Country | varchar(250) | YES  |     | NULL    |                |
++----------------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.025 sec)
+
+Oracle [EXPOSEDdb]> describe protocol;
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| Protocol_ID    | int(255)     | NO   | PRI | NULL    | auto_increment |
+| Name           | varchar(250) | YES  |     | NULL    |                |
+| Duration_Value | int(250)     | YES  |     | NULL    |                |
+| Duration_Units | varchar(250) | YES  |     | NULL    |                |
+| Description    | varchar(250) | YES  |     | NULL    |                |
+| Reference      | varchar(250) | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.027 sec)
+
+Oracle [EXPOSEDdb]> describe users;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int(150)     | NO   | PRI | NULL    | auto_increment |
+| username | varchar(200) | NO   |     | NULL    |                |
+| password | varchar(200) | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.019 sec)
 									</code></pre>
 									<pre><code>i = 0;
 
@@ -201,96 +412,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									
 								</section>
 
-								<section>
-									<h3 class="major">Projects</h3>
-									
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>XXX</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Investissement d'avenir</td>
-													<td>French program</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
+								
 								
 							</article>
 
