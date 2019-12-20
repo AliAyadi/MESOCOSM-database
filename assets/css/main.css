@@ -1141,7 +1141,7 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/Exposed.PNG");
-			background-size: auto, 1100px 600px;
+			background-size: auto, 1300px 800px;
 			background-position: center, center;
 			background-repeat: no-repeat;
 			z-index: 2;
