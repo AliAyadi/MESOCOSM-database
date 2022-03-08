@@ -5,7 +5,7 @@
 -->
 <html>
 	<head>
-		<title>EXPOSED - Environmental eXPOsure to nanomaterials Database</title>
+		<title>MESOCOSM - Environmental eXPOsure to nanomaterials Database</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -23,10 +23,10 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>EXPOSED</h1>
-								<p>The EXPOSED database is a novel, comprehensive and exclusive database on environmental exposure to nanoparticles designed by <a href="#">the LabEx SERENADE</a>.<br>
+								<h1>MESOCOSM</h1>
+								<p>The MESOCOSM database is a novel, comprehensive and exclusive database on environmental exposure to nanoparticles designed by <a href="#">the LabEx SERENADE</a>.<br>
 								Based on the Safe-by-Design approach, the EXPOSED database can be used as benchmarking source to improve both safety and efficacy of manufactured nanomaterials.<br>
-								EXPOSED is available as downloadable SQL file for free under an <a href="#">Open Database License v1.0</a>.<br>
+								MESOCOSM is available as downloadable SQL file for free under an <a href="#">Open Database License v1.0</a>.<br>
 								A JAVA <a href="#">Graphical User Interface (GUI)</a> is freely available to provide direct managing, searching and browsing.<br>
 								The <a href="#"> web portal </a> of the EXPOSED database was built in HTML, CSS, JavaScript and JQuery to make it more attractive.</p>
 							</div>
@@ -48,9 +48,9 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">About</h2>
-								<p>The EXPOSED database - for Environmental eXPOsure to nanomaterials Database - is a computational infrastructure for toxicological data management of engineered nanomaterials.</p> 
+								<p>The MESOCOSM database - for Environmental eXPOsure to nanomaterials Database - is a computational infrastructure for toxicological data management of engineered nanomaterials.</p> 
 								<p>It has developed an environmental exposure database (aquatic mesocosms data, release from products data, ecotox data, …) based on results obtained within the SERENADE's team and H2020 projects.</p>
-								<p>EXPOSED aims to predict and explain the nanomaterial behavior and fate in different eocsystems as well as their potential impacts on the environment at different stages of the nanoproducts lifecyle.</p>
+								<p>MESOCOSM aims to predict and explain the nanomaterial behavior and fate in different eocsystems as well as their potential impacts on the environment at different stages of the nanoproducts lifecyle.</p>
 								<blockquote>In summary, EXPOSED is a distinct database resource providing thousands of experiment data obtained in tens of unique experiments investigating Ag, CeO2, CuO, TiO2,…-based nanomaterials.</blockquote>
 								<span class="image fit"><img src="images/SERENADE.png" alt="" /></span>
 								
@@ -66,8 +66,8 @@
 								<p>This the EXPOSED database <a href="https://www.mediafire.com/view/oc6v7yokxr74930/Exposed_schema.png/file">schema</a> and this <a href="https://www.mediafire.com/file/wwodgokb5vou2c7/EXPOSEDdb.pdf/file">report</a> presents the logical database schema design.<br> 
 								Please refer to the <a href="#element">download tab</a>, for additional details about the database installation.</p>
 								<h3 class="major">Run application file</h3>
-								<p>This <a href="#">presentation</a> presents the different steps for running the EXPOSED project<br>
-								This <a href="#">file</a> contains the executable jar file of the EXPOSED project.<br></p>
+								<p>This <a href="#">presentation</a> presents the different steps for running the MESOCOSM project<br>
+								This <a href="#">file</a> contains the executable jar file of the MESOCOSM project.<br></p>
 								<p>How to use it?<br>
    								First copy the folder to your computer and then run the EXPOSED.jar file.<br>
    								Once you register, the SERENADE team will send you a username and a password.<br>
@@ -87,7 +87,7 @@
 								<h2 class="major">Licencing</h2>
 								<h3 class="major">Licence</h3>
 								<p>This project (database and application) is developed by the LaBEx SERENADE (Laboratory of Excellence for Safe(r) Ecodesign Research and Education applied to NAnomaterial DEvelopment).<br>
-								The EXPOSED database and application are free to use under the licence agreement Creative Commons - Share alike.<br>
+								The MESOCOSM database and application are free to use under the licence agreement Creative Commons - Share alike.<br>
 								If you intend to use these database/application, as such or modifying them, please acknowledge the primary source monitoring "LabEx SERENADE".<br>
 								Please see the folder licenses/ for more detail. </p>
 								<h3 class="major">Funding</h3>
@@ -101,8 +101,8 @@
 								<h2 class="major">Download</h2>
 
 								<section>
-									<h3 class="major">The EXPOSED SQL database</h3>
-									<p>The SQL file of the EXPOSED database can be downloaded <a href="https://www.mediafire.com/file/uh191r4xyy67jmj/serenadedb.sql/file">here</a>.</p>
+									<h3 class="major">The MESOCOSM SQL database</h3>
+									<p>The SQL file of the MESOCOSM database can be downloaded <a href="https://www.mediafire.com/file/uh191r4xyy67jmj/serenadedb.sql/file">here</a>.</p>
 									
 									<h4>Prerequisites</h4>
 									<p>You need a MySQL database server (5.0+) and run the commands below through a user that has the following privileges:</p>
@@ -150,7 +150,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 Oracle [(none)]> use serenadedb;
 Database changed
 
-Oracle [EXPOSEDdb]> show tables;
+Oracle [MESOCOSMdb]> show tables;
 +----------------------+
 | Tables_in_EXPOSEDdb |
 +----------------------+
@@ -170,7 +170,7 @@ Oracle [EXPOSEDdb]> show tables;
 +----------------------+
 13 rows in set (0.002 sec)
 
-Oracle [EXPOSEDdb]> describe experiment;
+Oracle [MESOCOSMdb]> describe experiment;
 +---------------------+--------------+------+-----+---------+----------------+
 | Field               | Type         | Null | Key | Default | Extra          |
 +---------------------+--------------+------+-----+---------+----------------+
@@ -185,7 +185,7 @@ Oracle [EXPOSEDdb]> describe experiment;
 +---------------------+--------------+------+-----+---------+----------------+
 8 rows in set (0.023 sec)
 
-Oracle [EXPOSEDdb]> describe sampling;
+Oracle [MESOCOSMdb]> describe sampling;
 +----------------+-------------+------+-----+---------+----------------+
 | Field          | Type        | Null | Key | Default | Extra          |
 +----------------+-------------+------+-----+---------+----------------+
@@ -202,7 +202,7 @@ Oracle [EXPOSEDdb]> describe sampling;
 +----------------+-------------+------+-----+---------+----------------+
 10 rows in set (0.028 sec)
 
-Oracle [EXPOSEDdb]> describe measure;
+Oracle [MESOCOSMdb]> describe measure;
 +----------------------+----------+------+-----+---------+----------------+
 | Field                | Type     | Null | Key | Default | Extra          |
 +----------------------+----------+------+-----+---------+----------------+
@@ -240,7 +240,7 @@ Oracle [EXPOSEDdb]> describe measure;
 +----------------------+----------+------+-----+---------+----------------+
 31 rows in set (0.029 sec)
 
-Oracle [EXPOSEDdb]> describe publication;
+Oracle [MESOCOSMdb]> describe publication;
 +-----------------+--------------+------+-----+---------+-------+
 | Field           | Type         | Null | Key | Default | Extra |
 +-----------------+--------------+------+-----+---------+-------+
@@ -260,7 +260,7 @@ Oracle [EXPOSEDdb]> describe publication;
 +-----------------+--------------+------+-----+---------+-------+
 13 rows in set (0.027 sec)
 
-Oracle [EXPOSEDdb]> describe publication;
+Oracle [MESOCOSMdb]> describe publication;
 +-----------------+--------------+------+-----+---------+-------+
 | Field           | Type         | Null | Key | Default | Extra |
 +-----------------+--------------+------+-----+---------+-------+
@@ -280,7 +280,7 @@ Oracle [EXPOSEDdb]> describe publication;
 +-----------------+--------------+------+-----+---------+-------+
 13 rows in set (0.027 sec)
 
-Oracle [EXPOSEDdb]> describe bibliography;
+Oracle [MESOCOSMdb]> describe bibliography;
 +-----------------+--------------+------+-----+---------+----------------+
 | Field           | Type         | Null | Key | Default | Extra          |
 +-----------------+--------------+------+-----+---------+----------------+
@@ -291,7 +291,7 @@ Oracle [EXPOSEDdb]> describe bibliography;
 +-----------------+--------------+------+-----+---------+----------------+
 4 rows in set (0.025 sec)
 
-Oracle [EXPOSEDdb]> describe description;
+Oracle [MESOCOSMdb]> describe description;
 +----------------+--------------+------+-----+---------+----------------+
 | Field          | Type         | Null | Key | Default | Extra          |
 +----------------+--------------+------+-----+---------+----------------+
@@ -304,7 +304,7 @@ Oracle [EXPOSEDdb]> describe description;
 +----------------+--------------+------+-----+---------+----------------+
 6 rows in set (0.029 sec)
 
-Oracle [EXPOSEDdb]> describe dictionary;
+Oracle [MESOCOSMdb]> describe dictionary;
 +---------------+--------------+------+-----+---------+----------------+
 | Field         | Type         | Null | Key | Default | Extra          |
 +---------------+--------------+------+-----+---------+----------------+
@@ -315,7 +315,7 @@ Oracle [EXPOSEDdb]> describe dictionary;
 +---------------+--------------+------+-----+---------+----------------+
 4 rows in set (0.024 sec)
 
-Oracle [EXPOSEDdb]> describe institution;
+Oracle [MESOCOSMdb]> describe institution;
 +----------------+--------------+------+-----+---------+----------------+
 | Field          | Type         | Null | Key | Default | Extra          |
 +----------------+--------------+------+-----+---------+----------------+
@@ -329,7 +329,7 @@ Oracle [EXPOSEDdb]> describe institution;
 +----------------+--------------+------+-----+---------+----------------+
 7 rows in set (0.042 sec)
 
-Oracle [EXPOSEDdb]> describe people;
+Oracle [MESOCOSMdb]> describe people;
 +-------------+--------------+------+-----+---------+----------------+
 | Field       | Type         | Null | Key | Default | Extra          |
 +-------------+--------------+------+-----+---------+----------------+
@@ -343,7 +343,7 @@ Oracle [EXPOSEDdb]> describe people;
 +-------------+--------------+------+-----+---------+----------------+
 7 rows in set (0.021 sec)
 
-Oracle [EXPOSEDdb]> describe instrument;
+Oracle [MESOCOSMdb]> describe instrument;
 +----------------------+--------------+------+-----+---------+----------------+
 | Field                | Type         | Null | Key | Default | Extra          |
 +----------------------+--------------+------+-----+---------+----------------+
@@ -357,7 +357,7 @@ Oracle [EXPOSEDdb]> describe instrument;
 +----------------------+--------------+------+-----+---------+----------------+
 7 rows in set (0.025 sec)
 
-Oracle [EXPOSEDdb]> describe protocol;
+Oracle [MESOCOSMdb]> describe protocol;
 +----------------+--------------+------+-----+---------+----------------+
 | Field          | Type         | Null | Key | Default | Extra          |
 +----------------+--------------+------+-----+---------+----------------+
@@ -370,7 +370,7 @@ Oracle [EXPOSEDdb]> describe protocol;
 +----------------+--------------+------+-----+---------+----------------+
 6 rows in set (0.027 sec)
 
-Oracle [EXPOSEDdb]> describe users;
+Oracle [MESOCOSMdb]> describe users;
 +----------+--------------+------+-----+---------+----------------+
 | Field    | Type         | Null | Key | Default | Extra          |
 +----------+--------------+------+-----+---------+----------------+
@@ -384,7 +384,7 @@ Oracle [EXPOSEDdb]> describe users;
 
 								<section>
 									<h3 class="major"> JAVA Graphical User Interface (GUI)</h3>
-									<p>It allows managing with the EXPOSED SQL database via a DataBase Management System (DBMS).</p>
+									<p>It allows managing with the MESOCOSM SQL database via a DataBase Management System (DBMS).</p>
 									<h4>Download file</h4>
 									<p>The source code is freely downloaded at <a href="#"> here </a>.</p>
 									<h4>Prerequisites</h4>
